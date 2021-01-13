@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="vue.global.js"></script>
+</head>
+<body>
+    <h1>Vue js 3</h1>
+
+    <div id="app">
+        <h1>{{ info.name }}</h1>
+
+        <p>get connected to <a target="_blank" :href="info.git">GitHub</a></p>
+
+        <p>get connected to <a target="_blank" v-bind:href="info.git">GitHub</a></p> <!--both works-->
+
+        <br>
+
+        {{info.html}}
+
+        <p v-html="info.html"></p>
+        
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
