@@ -13,7 +13,18 @@
 JavaScript Framework</h1>
     </div>
 
-    <div id="app">{{ msg }}</div>
+    <div id="app">
+      <h1>Name: {{info.name}}</h1>
+      <h2>Age: {{info.age}}
+        <br>
+        Job: {{info.job}}
+      </h2>
+      <h3>FB: <a target="_blank" v-bind:href="info.link">Vue.js</a></h3>
+      <p>{{info.html}}</p>
+      <p v-html="info.html"></p>
+      <!--do not take html input from the user-->
+    </div>
+
 
     <script src="app.js"></script>
   </body>
