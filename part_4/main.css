@@ -12,4 +12,11 @@
     display: grid;
     justify-content: center;
     color: #42B983;
+    padding: 10px;
+    margin: 10px;
+}
+
+#app{
+    padding: 10px;
+    margin: 10px;
 }
