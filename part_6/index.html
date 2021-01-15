@@ -16,8 +16,17 @@ JavaScript Framework</h1>
     <div id="app">
       <h1>Time: {{getCurrentTime()}}</h1>
       <h2>Likes: {{count}}</h2>
-      <button v-on:click="plus()">plus</button>
-      <button v-on:click="minus()">minus</button>
+      <button v-on:click="plus(1)">plus <strong>1</strong></button>
+      <button v-on:click="minus(1)">minus <strong>1</strong></button>
+      <br>
+      <button v-on:click="plus(2)">plus <strong>2</strong></button>
+      <button v-on:click="minus(2)">minus <strong>2</strong></button>
+
+      <hr>
+
+      <button v-on:click="test($event)">
+        test
+      </button>
     </div>
 
     <script src="app.js"></script>
