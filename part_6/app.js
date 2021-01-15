@@ -9,13 +9,20 @@ var app = Vue.createApp({
             let ct = new Date();
             return ct;
         },
-        plus(){
-            this.count++;
+        plus(n){
+            this.count = this.count + n;
         },
-        minus(){
+        minus(n){
             if(this.count > 0){
                 this.count--;
+                if(this.count < 0){
+                    this.count = 0;
+                }
             }
+        },
+        test(ev){
+            console.log("test");
+            console.log(ev);
         }
     }
 });
