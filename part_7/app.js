@@ -1,28 +1,21 @@
 var app = Vue.createApp({
     data(){
         return{
-            count: 0
+            name: ""
         };
     },
     methods: {
-        getCurrentTime(){
-            let ct = new Date();
-            return ct;
+        handleKeyUp(ev){
+            this.name = ev.target.value;
         },
-        plus(n){
-            this.count = this.count + n;
+        handleform(formdata){
+            console.log(formdata);
         },
-        minus(n){
-            if(this.count > 0){
-                this.count--;
-                if(this.count < 0){
-                    this.count = 0;
-                }
-            }
+        cardClick(){
+            console.log("ok");
         },
-        test(ev){
-            console.log("test");
-            console.log(ev);
+        viewbutton(e){
+            console.log("ok view");
         }
     }
 });
