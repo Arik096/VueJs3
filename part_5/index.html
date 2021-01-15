@@ -13,7 +13,12 @@
 JavaScript Framework</h1>
     </div>
 
-    <div id="app">{{ msg }}</div>
+    <div id="app">
+      <h1>Time: {{getCurrentTime()}}</h1>
+      <h2>Likes: {{count}}</h2>
+      <button v-on:click="plus()">plus</button>
+      <button v-on:click="minus()">minus</button>
+    </div>
 
     <script src="app.js"></script>
   </body>
