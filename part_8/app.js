@@ -1,21 +1,24 @@
 var app = Vue.createApp({
     data(){
         return{
-            name: ""
+            number: "",
+            result: "",
+            msg: ""
         };
     },
     methods: {
-        handleKeyUp(ev){
-            this.name = ev.target.value;
+        getDouble(){
+            this.result = this.number * 2;
         },
-        handleform(formdata){
-            console.log(formdata);
+        getSquare(){
+            this.result = this.number ** 2;
         },
-        cardClick(){
-            console.log("ok");
+        add10(){
+            this.result = this.number + 10;
         },
-        viewbutton(e){
-            console.log("ok view");
+        getReset(){
+            this.result = "";
+            this.number = "";
         }
     }
 });
