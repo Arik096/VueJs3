@@ -6,13 +6,13 @@ var app = Vue.createApp({
         { name: "css", exp: 3 },
         { name: "js", exp: 1 }
       ],
-      newSkill: {}
+      newSkill: {name: "", exp: 0}
     };
   },
   methods: {
     addSkill() {
-      this.skills.push({name: this.newSkill, exp: 0});
-      this.newSkill = {};
+      this.skills.push(this.newSkill);
+      this.newSkill = {name: "", exp: 0};
     },
     revomeListItem(i) {
       this.skills.splice(i, 1);
