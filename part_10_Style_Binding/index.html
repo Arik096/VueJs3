@@ -13,14 +13,10 @@
     </div>
 
     <div id="app">
-      <button class="button" :class="{active: activeClass == 'red'}" @click="setClass('red')">Red</button>
-      <button class="button" :class="{active: activeClass == 'green', bold: true}" @click="setClass('green')">Green</button>
-      <button class="button" :class="{active: activeClass == 'blue'}" @click="setClass('blue')">Blue</button>
-      <br><br>
-
-      <div :class="activeClass"></div>
-      <br><br>
-      <button :class="['button',{active: activeClass == 'blue'}]">test</button>
+      <input type="text" v-model="bgColor">
+      <input type="text" v-model="tColor">
+      <input type="color" v-model="bgColor">
+      <div class="card" :style="{backgroundColor: bgColor, color: tColor}">Card</div>
     </div>
 
     <script src="app.js"></script>
