@@ -1,13 +1,11 @@
 var app = Vue.createApp({
   data() {
     return {
-        activeClass: "red"
+        bgColor: "green",
+        tColor: "red"
     };
   },
   methods: {
-      setClass(color){
-          this.activeClass = color;
-      }
   },
 });
 
