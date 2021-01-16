@@ -17,8 +17,11 @@
       <input type="text" v-model="newSkill.name">
       <button @click="addSkill">Add</button>
       <ul>
-        <li v-for="(skill,i) in skills" @click="revomeListItem(i)">
-          {{skill.name}} -> {{skill.exp}}
+        <li v-for="(skill,i) in skills" @click="revomeListItem(i)" :key="skill.name">
+          <p>
+            {{skill.name}} -> {{skill.exp}}
+          </p>
+          <input type="text" placeholder="Remark" @click.stop>
         </li>
       </ul>
     </div>
