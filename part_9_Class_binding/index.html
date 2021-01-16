@@ -9,25 +9,18 @@
   </head>
   <body>
     <div class="c-head">
-      <h1 id="vue-tag">Vue.js 3 - The Progressive
-JavaScript Framework</h1>
+      <h1 id="vue-tag">Vue.js 3 - The Progressive JavaScript Framework</h1>
     </div>
 
     <div id="app">
-      <h3>Enter a Number</h3>
-      <input v-model.number="number" type="number">
+      <button class="button" :class="{active: activeClass == 'red'}" @click="setClass('red')">Red</button>
+      <button class="button" :class="{active: activeClass == 'green', bold: true}" @click="setClass('green')">Green</button>
+      <button class="button" :class="{active: activeClass == 'blue'}" @click="setClass('blue')">Blue</button>
       <br><br>
-      <input v-model.trim="msg" type="text">
+
+      <div :class="activeClass"></div>
       <br><br>
-      <hr>
-      <button @click="getDouble">Get Double</button>
-      <button @click="getSquare">Get Square</button>
-      <button @click="add10">Add 10</button>
-      <button @click="getReset">Reset</button>
-      <br><hr>
-      <h2>Entered Number: {{number}}</h2>
-      <h3>Result: {{result}}</h3>
-      <h3>Trimed result: {{msg}}</h3>
+      <button :class="['button',{active: activeClass == 'blue'}]">test</button>
     </div>
 
     <script src="app.js"></script>
