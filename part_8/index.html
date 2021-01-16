@@ -13,7 +13,23 @@
 JavaScript Framework</h1>
     </div>
 
-    <div id="app">{{ msg }}</div>
+    <div id="app">
+      <form @submit.prevent="handleform">
+        <h3>Enter Your Name: </h3>
+        <input type="text" name="name" id="name" @keyup="handleKeyUp">
+        <br>
+        <br>
+        <hr>
+        <h1>Welcome {{name}}!</h1>
+        <button type="submit">OK</button>
+      </form>
+      <hr>
+      <hr>
+      <br>
+      <div class="card" @click.="cardClick">
+        <button @click.stop="viewbutton">view</button>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
