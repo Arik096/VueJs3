@@ -14,21 +14,20 @@ JavaScript Framework</h1>
     </div>
 
     <div id="app">
-      <form @submit.prevent="handleform">
-        <h3>Enter Your Name: </h3>
-        <input type="text" name="name" id="name" @keyup="handleKeyUp">
-        <br>
-        <br>
-        <hr>
-        <h1>Welcome {{name}}!</h1>
-        <button type="submit">OK</button>
-      </form>
+      <h3>Enter a Number</h3>
+      <input v-model.number="number" type="number">
+      <br><br>
+      <input v-model.trim="msg" type="text">
+      <br><br>
       <hr>
-      <hr>
-      <br>
-      <div class="card" @click.="cardClick">
-        <button @click.stop="viewbutton">view</button>
-      </div>
+      <button @click="getDouble">Get Double</button>
+      <button @click="getSquare">Get Square</button>
+      <button @click="add10">Add 10</button>
+      <button @click="getReset">Reset</button>
+      <br><hr>
+      <h2>Entered Number: {{number}}</h2>
+      <h3>Result: {{result}}</h3>
+      <h3>Trimed result: {{msg}}</h3>
     </div>
 
     <script src="app.js"></script>
