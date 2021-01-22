@@ -23,8 +23,9 @@
       </table>
       <h3>skills</h3>
       <p>
-        <template v-for=" skill in skills" :key="skill.name">
-          {{skill.name }},
+        <template v-for=" skill, i in skills" :key="skill.name">
+          <span v-if="i < 1">{{skill.name}}</span>
+          <span v-else>, {{skill.name}}</span>
         </template>
       </p>
     </div>
