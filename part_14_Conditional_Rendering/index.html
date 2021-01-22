@@ -13,10 +13,20 @@
     </div>
 
     <div id="app">
-      <input type="text" v-model="bgColor">
-      <input type="text" v-model="tColor">
-      <input type="color" v-model="bgColor">
-      <div class="card" :style="{backgroundColor: bgColor, color: tColor}">Card</div>
+      <h3>About Me</h3>
+      <table>
+        <tr v-for="value, key, i in aboutMe">
+          <th>{{i+1}}</th>
+          <th>{{key}}</th>
+          <td>{{value}}</td>
+        </tr>
+      </table>
+      <h3>skills</h3>
+      <p>
+        <template v-for=" skill in skills" :key="skill.name">
+          {{skill.name }},
+        </template>
+      </p>
     </div>
 
     <script src="app.js"></script>
