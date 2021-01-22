@@ -1,23 +1,19 @@
 var app = Vue.createApp({
   data() {
     return {
+      aboutMe: {
+        name: "arik",
+        job: "coder",
+        skill: "php"
+      },
       skills: [
-        { name: "html", exp: 3 },
-        { name: "css", exp: 3 },
-        { name: "js", exp: 1 }
-      ],
-      newSkill: {name: "", exp: 0}
+        { name: "html", exp: 5 },
+        { name: "css", exp: 7 },
+        { name: "sass", exp: 8 }
+      ]
     };
   },
-  methods: {
-    addSkill() {
-      this.skills.push(this.newSkill);
-      this.newSkill = {name: "", exp: 0};
-    },
-    revomeListItem(i) {
-      this.skills.splice(i, 1);
-    },
-  },
+  methods: {}
 });
 
 app.mount("#app");
