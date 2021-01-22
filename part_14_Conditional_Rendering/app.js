@@ -1,12 +1,19 @@
 var app = Vue.createApp({
   data() {
     return {
-        bgColor: "green",
-        tColor: "red"
+      aboutMe: {
+        name: "arik",
+        job: "coder",
+        skill: "php"
+      },
+      skills: [
+        { name: "html", exp: 5 },
+        { name: "css", exp: 7 },
+        { name: "sass", exp: 8 }
+      ]
     };
   },
-  methods: {
-  },
+  methods: {}
 });
 
 app.mount("#app");
