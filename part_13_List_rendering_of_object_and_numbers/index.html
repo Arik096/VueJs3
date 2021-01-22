@@ -13,10 +13,17 @@
     </div>
 
     <div id="app">
-      <input type="text" v-model="bgColor">
-      <input type="text" v-model="tColor">
-      <input type="color" v-model="bgColor">
-      <div class="card" :style="{backgroundColor: bgColor, color: tColor}">Card</div>
+      <h3>Skills</h3>
+      <input type="text" v-model="newSkill.name">
+      <button @click="addSkill">Add</button>
+      <ul>
+        <li v-for="(skill,i) in skills" @click="revomeListItem(i)" :key="skill.name">
+          <p>
+            {{skill.name}} -> {{skill.exp}}
+          </p>
+          <input type="text" placeholder="Remark" @click.stop>
+        </li>
+      </ul>
     </div>
 
     <script src="app.js"></script>
