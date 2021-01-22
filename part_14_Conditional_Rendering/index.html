@@ -13,20 +13,17 @@
     </div>
 
     <div id="app">
-      <h3>About Me</h3>
-      <table>
-        <tr v-for="value, key, i in aboutMe">
-          <th>{{i+1}}</th>
-          <th>{{key}}</th>
-          <td>{{value}}</td>
-        </tr>
-      </table>
-      <h3>skills</h3>
-      <p>
-        <template v-for=" skill in skills" :key="skill.name">
-          {{skill.name }},
-        </template>
-      </p>
+      <button @click="toggle">Show/hide</button>
+      <div class="card" v-show="show"></div>
+
+      <ul>
+        <li v-for="skill in skills">
+          {{skill.name}} - 
+          <span v-if="skill.exp < 20 ">New</span>
+          <span v-else-if="skill.exp > 20 && skill.exp < 40 ">inter</span>
+          <span v-else-if="skill.exp > 40 ">pro</span>
+        </li>
+      </ul>
     </div>
 
     <script src="app.js"></script>
