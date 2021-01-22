@@ -13,27 +13,15 @@
     </div>
 
     <div id="app">
-      <input type="text" v-model="review" placeholder="write your review">
+      <input type="text" v-model="mobile" placeholder="Enter 11 digit Mobile Number">
       <br><br><hr><br>
-      <h3>skills</h3>
-      <br><hr><br>
-      <ul>
-        <li v-for="skill, i in skills" :key="skill.name" @click="removeFromList(i)">
-          {{skill.name}} - {{skill.Exp}}
-        </li>
-      </ul>
-      <br><hr><br>
-      <h3>Total: {{totalCount1}}</h3>
-      <br><hr><br>
-      <h3>Exp skills</h3>
-      <br><hr><br>
-      <ul>
-        <li v-for="skill, i in expSkills" :key="skill.name" >
-          {{skill.name}} - {{skill.Exp}}
-        </li>
-      </ul>
-      <br><hr><br>
-      <h3>Total: {{totalCount1}}</h3>
+
+      <input type="text" v-model="name.firstName" placeholder="Enter 1st name">
+      <br><br><hr><br>
+
+      <input type="text" v-model="name.lastName" placeholder="Enter last name">
+      <br><br><hr><br>
+      
     </div>
 
     <script src="app.js"></script>
