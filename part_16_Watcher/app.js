@@ -1,37 +1,48 @@
 var app = Vue.createApp({
   data() {
     return {
-      skills: [
-        { name: "Html", Exp: 2 },
-        { name: "css", Exp: 3 },
-        { name: "sass", Exp: 1 },
-        { name: "js", Exp: 15 },
-        { name: "node", Exp: 12 },
-        { name: "vue", Exp: 3 },
-        { name: "python", Exp: 15 },
-        { name: "java", Exp: 3 },
-      ],
+      mobile: "",
+      name: {
+        firstName: "",
+        lasrName: ""
+      }
     };
+
   },
+
   computed: {
-    totalCount1() {
-      return this.skills.length;
+  },
+
+  methods: {
+  },
+
+  watch: {
+    mobile(newValue, oldValue){
+      console.log(newValue);
+      
+      if(isNaN(newValue)){
+        alert("Enter Valid Mobile Number");
+        this.mobile = oldValue;
+      }
+
+      if(newValue.length ==  11)
+      {
+        alert("An OTP has been sent")
+      }
     },
-    expSkills(){
-      let es = this.skills.filter(item=> {
-        return item.Exp >=10;
-      })
-      return es;
+
+    // "name.firstName": function(newValue, oldValue){
+    //   console.log(newValue, oldValue);
+    // },
+
+    name: {
+      deep: true,
+      handler: function(newValue, oldValue){
+       console.log(newValue, oldValue); 
+      }
     }
   },
-  methods: {
-    removeFromList(i) {
-      this.skills.splice(i, 1);
-    },
-    totalCount() {
-      return this.skills.length;
-    },
-  },
+
 });
 
 app.mount("#app");
