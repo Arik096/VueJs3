@@ -13,17 +13,20 @@
     </div>
 
     <div id="app">
-      <h3>Skills</h3>
-      <input type="text" v-model="newSkill.name">
-      <button @click="addSkill">Add</button>
-      <ul>
-        <li v-for="(skill,i) in skills" @click="revomeListItem(i)" :key="skill.name">
-          <p>
-            {{skill.name}} -> {{skill.exp}}
-          </p>
-          <input type="text" placeholder="Remark" @click.stop>
-        </li>
-      </ul>
+      <h3>About Me</h3>
+      <table>
+        <tr v-for="value, key, i in aboutMe">
+          <th>{{i+1}}</th>
+          <th>{{key}}</th>
+          <td>{{value}}</td>
+        </tr>
+      </table>
+      <h3>skills</h3>
+      <p>
+        <template v-for=" skill in skills" :key="skill.name">
+          {{skill.name }},
+        </template>
+      </p>
     </div>
 
     <script src="app.js"></script>
