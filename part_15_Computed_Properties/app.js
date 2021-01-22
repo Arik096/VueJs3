@@ -11,6 +11,7 @@ var app = Vue.createApp({
         { name: "python", Exp: 15 },
         { name: "java", Exp: 3 },
       ],
+      review: ""
     };
   },
   computed: {
@@ -32,6 +33,11 @@ var app = Vue.createApp({
       return this.skills.length;
     },
   },
+  watch: {
+    review(newValue, oldValue){
+      console.log(newValue, oldValue);
+    }
+  }
 });
 
 app.mount("#app");
