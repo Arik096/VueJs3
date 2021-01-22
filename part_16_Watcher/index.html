@@ -13,10 +13,27 @@
     </div>
 
     <div id="app">
-      <input type="text" v-model="bgColor">
-      <input type="text" v-model="tColor">
-      <input type="color" v-model="bgColor">
-      <div class="card" :style="{backgroundColor: bgColor, color: tColor}">Card</div>
+      <input type="text" v-model="review" placeholder="write your review">
+      <br><br><hr><br>
+      <h3>skills</h3>
+      <br><hr><br>
+      <ul>
+        <li v-for="skill, i in skills" :key="skill.name" @click="removeFromList(i)">
+          {{skill.name}} - {{skill.Exp}}
+        </li>
+      </ul>
+      <br><hr><br>
+      <h3>Total: {{totalCount1}}</h3>
+      <br><hr><br>
+      <h3>Exp skills</h3>
+      <br><hr><br>
+      <ul>
+        <li v-for="skill, i in expSkills" :key="skill.name" >
+          {{skill.name}} - {{skill.Exp}}
+        </li>
+      </ul>
+      <br><hr><br>
+      <h3>Total: {{totalCount1}}</h3>
     </div>
 
     <script src="app.js"></script>
