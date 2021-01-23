@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ticket Booking App</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <div id="app">
-        <h3>test</h3>
-    </div>
+    <link rel="stylesheet" href="main.css" />
+    <script src="vue.global.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="heading-section">
+      <h1>Ticket Booking App</h1>
+    </section>
+
+    <section id="main-section">
+      <div id="main-div">
+        <div id="card">
+          <div id="information">
+            <ul>
+              <li>
+                <div id="information-color-box-sold"></div>
+                Sold
+              </li>
+              <li>
+                <div id="information-color-box-available"></div>
+                Available
+              </li>
+              <li>
+                <div id="information-color-box-booked"></div>
+                Booked
+              </li>
+              <li>
+                <div id="information-color-box-selected"></div>
+                Seleted
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
