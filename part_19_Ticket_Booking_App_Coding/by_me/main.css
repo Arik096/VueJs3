@@ -1,0 +1,63 @@
+*{
+    font-family: 'Work Sans',sans-serif;
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+}
+
+.heading-section{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(33, 3, 102);
+    color: teal;
+    font-style: bold;
+}
+
+#main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card{
+    border: 1px solid rgb(93, 84, 84);
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+    margin: 10px;
+}
+ul{
+    display: flex;
+    align-items: center;
+}
+
+li{
+    margin: 10px;
+}
+
+#information-color-box-sold{
+    height: 15px;
+    width: 20px;
+    background-color: red;
+    border: 1px solid black;
+}
+#information-color-box-available{
+    height: 15px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid black;
+}
+#information-color-box-booked{
+    height: 15px;
+    width: 20px;
+    background-color: rgb(134, 131, 131);
+    border: 1px solid black;
+}
+#information-color-box-selected{
+    height: 15px;
+    width: 20px;
+    background-color: rgb(8, 246, 48);
+    border: 1px solid black;
+}
