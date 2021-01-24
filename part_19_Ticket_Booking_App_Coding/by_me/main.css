@@ -34,7 +34,7 @@ ul{
 }
 
 li{
-    margin: 10px;
+    margin: 20px;
 }
 
 #information-color-box-sold{
@@ -61,3 +61,74 @@ li{
     background-color: rgb(8, 246, 48);
     border: 1px solid black;
 }
+
+#booking-section{
+    height: auto;
+    width: auto;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#seat-plan{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr 2fr;
+    gap: 5px 10px;
+    height: auto;
+    width: auto;
+    border: 1px solid rgb(93, 84, 84);
+    border-radius: 5px;
+    margin: 10px;
+}
+#door {
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(93, 84, 84);
+    margin: 10px;
+    padding: 10px;
+}
+
+#driver {
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(93, 84, 84);
+    margin: 10px;
+    padding: 10px;
+}
+
+#seat-1, #seat-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 5px;
+    padding: 5px;
+}
+
+#A1, #A2, #B1, #B2, #C1, #C2, #D1, #D2, #E1, #E2, #F1, #F2{
+    border: 1px solid rgb(93, 84, 84);
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+}
+
+#A3, #A4, #B3, #B4, #C3, #C4, #D3, #D4, #E3, #E4, #F3, #F4 {
+    border: 1px solid rgb(93, 84, 84);
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+#price-section{
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(93, 84, 84);
+    border-radius: 5px;
+    margin: 10px;
+}
+
