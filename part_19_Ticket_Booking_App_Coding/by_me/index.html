@@ -42,40 +42,206 @@
           </div>
           <div id="booking-section">
             <div id="seat-plan">
-                <div id="door">Door</div>
-                <div id="driver">Driver</div>
-                <div id="seat-1">
-                  <button v-bind:style="{backgroundColor: seatBGColor.A1}" id="A1" @click="checkAndSelect($event)">A1</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.A2}" id="A2" @click="checkAndSelect($event)">A2</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.B1}" id="B1" @click="checkAndSelect($event)">B1</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.B2}" id="B2" @click="checkAndSelect($event)">B2</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.C1}" id="C1" @click="checkAndSelect($event)">C1</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.C2}" id="C2" @click="checkAndSelect($event)">C2</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.D1}" id="D1" @click="checkAndSelect($event)">D1</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.D2}" id="D2" @click="checkAndSelect($event)">D2</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.E1}" id="E1" @click="checkAndSelect($event)">E1</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.E2}" id="E2" @click="checkAndSelect($event)">E2</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.F1}" id="F1" @click="checkAndSelect($event)">F1</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.F2}" id="F2" @click="checkAndSelect($event)">F2</button>
-                </div>
-                <div id="seat-2">
-                  <button v-bind:style="{backgroundColor: seatBGColor.A3}" id="A3" @click="checkAndSelect($event)">A3</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.A4}" id="A4" @click="checkAndSelect($event)">A4</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.B3}" id="B3" @click="checkAndSelect($event)">B3</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.B4}" id="B4" @click="checkAndSelect($event)">B4</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.C3}" id="C3" @click="checkAndSelect($event)">C3</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.C4}" id="C4" @click="checkAndSelect($event)">C4</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.D3}" id="D3" @click="checkAndSelect($event)">D3</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.D4}" id="D4" @click="checkAndSelect($event)">D4</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.E3}" id="E3" @click="checkAndSelect($event)">E3</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.E4}" id="E4" @click="checkAndSelect($event)">E4</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.F3}" id="F3" @click="checkAndSelect($event)">F3</button>
-                  <button v-bind:style="{backgroundColor: seatBGColor.F4}" id="F4" @click="checkAndSelect($event)">F4</button>
-                </div>
+              <div id="door">Door</div>
+              <div id="driver">Driver</div>
+              <div id="seat-1">
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.A1}"
+                  id="A1"
+                  @click="checkAndSelect($event)"
+                >
+                  A1
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.A2}"
+                  id="A2"
+                  @click="checkAndSelect($event)"
+                >
+                  A2
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.B1}"
+                  id="B1"
+                  @click="checkAndSelect($event)"
+                >
+                  B1
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.B2}"
+                  id="B2"
+                  @click="checkAndSelect($event)"
+                >
+                  B2
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.C1}"
+                  id="C1"
+                  @click="checkAndSelect($event)"
+                >
+                  C1
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.C2}"
+                  id="C2"
+                  @click="checkAndSelect($event)"
+                >
+                  C2
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.D1}"
+                  id="D1"
+                  @click="checkAndSelect($event)"
+                >
+                  D1
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.D2}"
+                  id="D2"
+                  @click="checkAndSelect($event)"
+                >
+                  D2
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.E1}"
+                  id="E1"
+                  @click="checkAndSelect($event)"
+                >
+                  E1
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.E2}"
+                  id="E2"
+                  @click="checkAndSelect($event)"
+                >
+                  E2
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.F1}"
+                  id="F1"
+                  @click="checkAndSelect($event)"
+                >
+                  F1
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.F2}"
+                  id="F2"
+                  @click="checkAndSelect($event)"
+                >
+                  F2
+                </button>
+              </div>
+              <div id="seat-2">
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.A3}"
+                  id="A3"
+                  @click="checkAndSelect($event)"
+                >
+                  A3
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.A4}"
+                  id="A4"
+                  @click="checkAndSelect($event)"
+                >
+                  A4
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.B3}"
+                  id="B3"
+                  @click="checkAndSelect($event)"
+                >
+                  B3
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.B4}"
+                  id="B4"
+                  @click="checkAndSelect($event)"
+                >
+                  B4
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.C3}"
+                  id="C3"
+                  @click="checkAndSelect($event)"
+                >
+                  C3
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.C4}"
+                  id="C4"
+                  @click="checkAndSelect($event)"
+                >
+                  C4
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.D3}"
+                  id="D3"
+                  @click="checkAndSelect($event)"
+                >
+                  D3
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.D4}"
+                  id="D4"
+                  @click="checkAndSelect($event)"
+                >
+                  D4
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.E3}"
+                  id="E3"
+                  @click="checkAndSelect($event)"
+                >
+                  E3
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.E4}"
+                  id="E4"
+                  @click="checkAndSelect($event)"
+                >
+                  E4
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.F3}"
+                  id="F3"
+                  @click="checkAndSelect($event)"
+                >
+                  F3
+                </button>
+                <button
+                  v-bind:style="{backgroundColor: seatBGColor.F4}"
+                  id="F4"
+                  @click="checkAndSelect($event)"
+                >
+                  F4
+                </button>
+              </div>
             </div>
             <div id="price-section">
-              <p>No Seat Selected</p>
-              <p>Select A Seat First</p>
+              <span v-if="SelectedSeatCost.length == 0">
+                <p>
+                  No Seat Selected
+                  <br />
+                  Select A Seat First
+                </p>
+              </span>
+              <span v-if="SelectedSeatCost.length != 0">
+                <h3>Selected Seat</h3>
+                <table>
+                  <tr>
+                    <th>Seat</th>
+                    <th>Cost</th>
+                  </tr>
+                  <tr v-for="seats in SelectedSeatCost">
+                    <td>{{seats.seat}}</td>
+                    <td>{{seats.cost}}</td>
+                  </tr>
+                  <tr>
+                    <td>Total</td>
+                    <td>{{totalCost}}</td>
+                  </tr>
+                </table>
+              </span>
             </div>
           </div>
         </div>
