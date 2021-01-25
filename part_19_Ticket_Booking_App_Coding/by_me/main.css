@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:rgb(33, 3, 102);
+    background-color:rgb(56, 4, 80);
     color: teal;
     font-style: bold;
 }
@@ -125,10 +125,8 @@ li{
 
 
 #price-section{
-    height: 100px;
-    width: 100px;
-    border: 1px solid rgb(93, 84, 84);
-    border-radius: 5px;
+    height: auto;
+    width: auto;
     margin: 10px;
 }
 
