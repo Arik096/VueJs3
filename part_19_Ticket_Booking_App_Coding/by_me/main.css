@@ -133,7 +133,8 @@ li{
 td, th{
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 8px;
+    padding: 5px;
+    margin: 5px;
 }
 
 
