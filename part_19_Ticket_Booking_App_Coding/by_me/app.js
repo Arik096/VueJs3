@@ -94,6 +94,25 @@ var app = Vue.createApp({
             SelectedSeat: 0,
             SelectedSeatCost: [],
             totalCost: 0,
+            voucharCode: "",
+            vouchars: [
+                {
+                    name: "100TAKAOFF",
+                    value: 100
+                },
+                {
+                    name: "200TAKAOFF",
+                    value: 200
+                },
+                {
+                    name: "300TAKAOFF",
+                    value: 300
+                },
+                {
+                    name: "400TAKAOFF",
+                    value: 400
+                },
+            ]
         };
     },
 
@@ -123,7 +142,22 @@ var app = Vue.createApp({
 
     computed: {},
 
-    watch: {},
+    watch: {
+        voucharCode(newValue, oldValue){
+            if(newValue.length == 10){
+                for(code in vouchars){
+                    if(newValue == code.name){
+                        console.log("ok");
+                    }
+                }
+            }
+            else if(newValue.length>10){
+                alert("Invalid Code");
+
+                this.voucharCode = oldValue;
+            }
+        }
+    },
 
     mounted() {
         for (key in this.SeatList) {
