@@ -145,7 +145,15 @@
                 </tr>
               </table>
               <p>Do you have any Vouchar?</p>
-              <input v-model="voucharCode" type="text">
+              <input v-model="voucharCode" type="text" />
+              <p v-if="discount > 0">
+                <strong>You got {{discount}} TAKA OFF</strong>
+              </p>
+              <br>
+              <p>name:</p>
+              <input v-model="customerName" type="text">
+              <br>
+              <button >Submit</button>
             </span>
           </div>
         </div>
