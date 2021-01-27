@@ -94,6 +94,7 @@ var app = Vue.createApp({
             SelectedSeat: 0,
             SelectedSeatCost: [],
             totalCost: 0,
+            discount: 0,
             voucharCode: "",
             vouchars: [
                 {
@@ -112,7 +113,8 @@ var app = Vue.createApp({
                     name: "400TAKAOFF",
                     value: 400
                 },
-            ]
+            ],
+            customerName: "",
         };
     },
 
@@ -143,18 +145,18 @@ var app = Vue.createApp({
     computed: {},
 
     watch: {
-        voucharCode(newValue, oldValue){
-            if(newValue.length == 10){
-                for(code in vouchars){
-                    if(newValue == code.name){
-                        console.log("ok");
+        voucharCode(newValue, oldValue) {
+            if (newValue.length > 10) {
+                alert("Invalid Code");
+                this.voucharCode = oldValue;
+            }
+            else{
+                for( var j = 0 ; j < this.vouchars.length ; j++){
+                    if(newValue ==  this.vouchars[j].name){
+                        this.discount = this.vouchars[j].value;
+                        this.totalCost = this.totalCost - this.discount;
                     }
                 }
-            }
-            else if(newValue.length>10){
-                alert("Invalid Code");
-
-                this.voucharCode = oldValue;
             }
         }
     },
