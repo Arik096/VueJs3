@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="vue.global.js"></script>
+  </head>
+  <body>
+    <div class="c-head">
+      <h1 id="vue-tag">Vue.js 3 - The Progressive JavaScript Framework</h1>
+    </div>
+
+    <div id="app">
+      <button class="button" :class="{active: activeClass == 'red'}" @click="setClass('red')">Red</button>
+      <button class="button" :class="{active: activeClass == 'green', bold: true}" @click="setClass('green')">Green</button>
+      <button class="button" :class="{active: activeClass == 'blue'}" @click="setClass('blue')">Blue</button>
+      <br><br>
+
+      <div :class="activeClass"></div>
+      <br><br>
+      <button :class="['button',{active: activeClass == 'blue'}]">test</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
