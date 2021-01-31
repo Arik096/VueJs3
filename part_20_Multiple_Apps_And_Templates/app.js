@@ -1,48 +1,44 @@
-var app = Vue.createApp({
+var app1 = Vue.createApp({
   data() {
     return {
-      mobile: "",
-      name: {
-        firstName: "",
-        lasrName: ""
-      }
+      input: "",
     };
-
   },
 
-  computed: {
-  },
+  computed: {},
 
   methods: {
-  },
-
-  watch: {
-    mobile(newValue, oldValue){
-      console.log(newValue);
-      
-      if(isNaN(newValue)){
-        alert("Enter Valid Mobile Number");
-        this.mobile = oldValue;
-      }
-
-      if(newValue.length ==  11)
-      {
-        alert("An OTP has been sent")
-      }
+    clear() {
+      this.input = "";
     },
-
-    // "name.firstName": function(newValue, oldValue){
-    //   console.log(newValue, oldValue);
-    // },
-
-    name: {
-      deep: true,
-      handler: function(newValue, oldValue){
-       console.log(newValue, oldValue); 
-      }
-    }
   },
 
+  watch: {},
+
+  template: `
+      <br />
+      <input type="text" v-model="input" />
+      <button @click="clear()">clear</button>
+      <p>name : {{input}}</p>
+  `,
 });
 
-app.mount("#app");
+app1.mount("#app1");
+
+var app2 = Vue.createApp({
+  data() {
+    return {
+      msg: "welcome",
+    };
+  },
+
+  template: "<h2>{{msg}}</h2>",
+
+  computed: {},
+
+  methods: {},
+
+  watch: {},
+});
+
+app2.mount("#app2");
