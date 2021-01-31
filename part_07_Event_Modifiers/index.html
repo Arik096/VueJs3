@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="vue.global.js"></script>
+  </head>
+  <body>
+    <div class="c-head">
+      <h1 id="vue-tag">Vue.js 3 - The Progressive
+JavaScript Framework</h1>
+    </div>
+
+    <div id="app">
+      <form @submit.prevent="handleform">
+        <h3>Enter Your Name: </h3>
+        <input type="text" name="name" id="name" @keyup="handleKeyUp">
+        <br>
+        <br>
+        <hr>
+        <h1>Welcome {{name}}!</h1>
+        <button type="submit">OK</button>
+      </form>
+      <hr>
+      <hr>
+      <br>
+      <div class="card" @click.="cardClick">
+        <button @click.stop="viewbutton">view</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
