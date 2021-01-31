@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="vue.global.js"></script>
+  </head>
+  <body>
+    <div class="c-head">
+      <h1 id="vue-tag">Vue.js 3 - The Progressive
+JavaScript Framework</h1>
+    </div>
+
+    <div id="app">
+      <h1>Name: {{info.name}}</h1>
+      <h2>Age: {{info.age}}
+        <br>
+        Job: {{info.job}}
+      </h2>
+      <h3>FB: <a target="_blank" v-bind:href="info.link">Vue.js</a></h3>
+      <p>{{info.html}}</p>
+      <p v-html="info.html"></p>
+      <!--do not take html input from the user-->
+    </div>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
