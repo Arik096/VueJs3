@@ -1,44 +1,15 @@
-var app1 = Vue.createApp({
+var app = Vue.createApp({
   data() {
     return {
-      input: "",
     };
-  },
+  }
+});
 
-  computed: {},
-
-  methods: {
-    clear() {
-      this.input = "";
-    },
-  },
-
-  watch: {},
-
+app.component("C-details", {
   template: `
-      <br />
-      <input type="text" v-model="input" />
-      <button @click="clear()">clear</button>
-      <p>name : {{input}}</p>
-  `,
+  <h1>Arik</h1>
+  `
 });
 
-app1.mount("#app1");
+app.mount('#app');
 
-var app2 = Vue.createApp({
-  data() {
-    return {
-      msg: "welcome",
-    };
-  },
-
-  template: "<h2>{{msg}}</h2>",
-
-  computed: {},
-
-  methods: {},
-
-  watch: {},
-});
-
-app2.mount("#app2");
